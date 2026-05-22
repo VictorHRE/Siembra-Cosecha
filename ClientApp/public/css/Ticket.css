@@ -1,0 +1,194 @@
+.ticket {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 2mm;
+    text-align: left;
+    width: 80mm;
+    word-wrap: break-word;
+}
+
+.ticket__header,
+.ticket__body,
+.ticket__footer {
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.ticket__title {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 2px 0;
+}
+
+.ticket__subtitle {
+    font-size: 8px;
+    font-weight: bold;
+
+    margin: 2px 0;
+    text-transform: none;
+}
+
+.ticket__address {
+    font-size: 9px;
+    margin: 2px 0;
+    margin-bottom: 0;
+}
+
+.ticket__separator {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 3px 0;
+}
+
+.ticket__info {
+    font-size: 11px;
+    margin: 2px 0;
+    text-align: left;
+}
+
+.ticket__table {
+    border-collapse: collapse;
+    font-size: 10px;
+    margin: 3px 0;
+    width: 100%;
+}
+
+.ticket__table-header,
+.ticket__table-cell {
+    padding: 1px 0;
+}
+
+.ticket__table-header {
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+}
+
+.ticket__table-producto-name {
+    max-width: 35mm;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.ticket__table-cell--center {
+    text-align: center;
+}
+
+.ticket__table-cell--right {
+    text-align: right;
+}
+
+/* tabla productos */
+
+.ticket__table {
+    border-collapse: collapse;
+    font-size: 9px; /* Reducido de 10px a 9px */
+    margin: 3px 0;
+    width: 100%;
+}
+
+.ticket__table-header,
+.ticket__table-cell {
+    padding: 1px 0;
+}
+
+.ticket__table-header {
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+}
+
+/* Especificar anchos para las columnas */
+.ticket__table-product {
+    max-width: 35mm;
+    text-align: left;
+    width: auto; /* Ocupa el espacio restante */
+    word-wrap: break-word;
+}
+
+.ticket__table-qty {
+    text-align: center;
+    width: 10mm; /* Ancho fijo para cantidad */
+}
+
+.ticket__table-price {
+    text-align: center;
+    width: 15mm; /* Ancho fijo para precio */
+}
+
+.ticket__table-total {
+    text-align: right;
+    width: 15mm; /* Ancho fijo para total */
+}
+
+/* Para las celdas del cuerpo */
+.ticket__table-cell.ticket__table-product {
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.ticket__table-cell.ticket__table-qty {
+    text-align: center;
+}
+
+.ticket__table-cell.ticket__table-price {
+    text-align: center;
+}
+
+.ticket__table-cell.ticket__table-total {
+    text-align: right;
+}
+
+.ticket__footer {
+    font-size: 10px;
+    padding-top: 3px;
+}
+
+.ticket__footer-title {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ticket__logo {
+    display: block;
+    height: auto;
+    margin: 0 auto 3px auto;
+    margin: 0;
+    padding: 0;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .ticket,
+    .ticket * {
+        visibility: visible;
+    }
+
+    .ticket {
+        box-sizing: border-box;
+        font-size: 11px;
+        left: 0;
+        margin: 0;
+        padding: 2mm;
+        position: absolute;
+        top: 0;
+        width: 80mm;
+    }
+
+    .ticket__separator {
+        border-top: 1px solid #000;
+    }
+
+    .ticket__logo {
+        display: block;
+        height: auto;
+        margin: 0 auto 3px auto;
+        margin: 0;
+        padding: 0;
+    }
+}
